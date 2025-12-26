@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Cart buttons</title>
+    </head>
+    <body>
+        <button onclick=" quantity += 1;
+        console.log(`${quantity}`)">Add to cart</button>
+        <button onclick=" quantity += 2;
+        console.log(`${quantity}`)">2</button>
+        <button onclick=" quantity += 3;
+        console.log(`${quantity}`)">3</button>
+        <button onclick=" quantity -= 1;
+        console.log(`${quantity}`)">remove from cart</button>
+        <button onclick="console.log(`Cart contents: ${quantity}`)">Show cart</button>
+        <p>Using Functions </p>
+
+        <button onclick="addToCart()">Add to cart</button>
+        <button onclick="removeFromCart()">remove from cart</button>    
+        <button onclick="showCart()">Show cart</button>     
+    </body>
+    <script>
+        let quantity = 0;
+        console.log("Initial quantity:", quantity);
+        function addToCart() {
+            quantity += 1;
+            console.log(`Added to cart. Current quantity: ${quantity}`);
+        }
+        function removeFromCart() {
+            if (quantity > 0) {
+                quantity -= 1;
+                console.log(`Removed from cart. Current quantity: ${quantity}`);
+            } else {
+                console.log("Cart is already empty.");
+            }
+        }
+        function showCart() {
+            console.log(`Cart contents: ${quantity}`);
+        }
+
+    </script>
+</html>
+ 
