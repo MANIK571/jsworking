@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <title>Rock Paper Scissor Game</title>
+    </head>
+    <body>
+        <button onclick="
+        let computerValue=Math.random()
+        console.log(computerValue)
+        if(0<=computerValue&&computerValue<1/3)
+        {computerValue='rock'
+        }
+        else if(1/3<=computerValue && computerValue<2/3)
+        {computerValue='scissor'
+        }
+        else if(2/3<=computerValue && computerValue<1)
+        {computerValue='paper'}
+         let result =''/*empty string*/
+         if(computerValue=='rock')
+         {result=('tie')}
+         else if(computerValue=='paper')
+         {result=('you lose')}
+         else if (computerValue=='scissor')
+         {result=('you win')}
+
+         window.alert(`you chose rock , computer chose ${computerValue}, the result is ${result}`);
+
+        " >rock</button>
+        <button 
+        
+        onclick="
+
+        let computerValue1=Math.random()
+        console.log(computerValue1)
+        if(0<=computerValue1&&computerValue1<1/3)
+        {computerValue1='rock'
+        }
+        else if(1/3<=computerValue1 && computerValue1<2/3)
+        {computerValue1='scissor'
+        }
+        else if(2/3<=computerValue1 && computerValue1<1)
+        {computerValue1='paper'}
+
+        let result1 =''/*empty string*/
+         if(computerValue1=='rock')
+         {result1=('you win')}
+         else if(computerValue1=='paper')
+         {result1=('tie')}
+         else if (computerValue1=='scissor')
+         {result1=('you lose')}
+         window.alert(`you chose paper , computer chose ${computerValue1}, the result is ${result1}`);
+
+        
+        
+        
+        ">paper</button>
+        <button
+        onclick ="
+         let computerValue2=Math.random()
+        console.log(computerValue2)
+        if(0<=computerValue2 &&computerValue2<1/3)
+        {computerValue2='rock'
+        }
+        else if(1/3<=computerValue2 && computerValue2<2/3)
+        {computerValue2='scissor'
+        }
+        else if(2/3<=computerValue2 && computerValue2<1)
+        {computerValue2='paper'}
+
+        let result2 =''/*empty string*/
+         if(computerValue2=='rock')
+         {result2=('you lose')}
+         else if(computerValue2=='paper')
+         {result2=('you win')}
+         else if (computerValue2=='scissor')
+         {result2=('tie')}
+         window.alert(`you chose scissor , computer chose ${computerValue2}, the result is ${result2}`);
+        ">scissor</button>     
+
+
+
+
+
+        <p>using functions</p>
+
+        <button onclick=" computerchoice();comput('rock')">rock</button>
+        <button onclick="computerchoice();comput('paper')">paper</button>
+        <button onclick="computerchoice();comput('scissors')">scissors</button>
+
+        <script>
+            function computerchoice(){
+               
+
+                let value=Math.random()
+                let choice=''
+                if(0<=value && value<1/3)
+                {choice='rock'}
+                else if(1/3<=value && value<2/3)
+                {
+                    choice='paper'
+                }
+                else if(2/3 <=value && value <1)
+                {
+                    choice ='scissors'
+                }
+                return choice;
+            }
+            function comput(t){
+                let result;
+                let uc = t;
+                let cc=computerchoice();
+                if(uc==cc)
+                {
+                    result=('tie');
+                }
+                else if (uc=='scissors' && cc=='rock')
+                {result=('you lose');}
+                 else if (uc=='paper'&&  cc=='rock')
+                {result=('you win');}
+                else if (uc=='scissors' && cc=='paper')
+                {result=('you win');}
+                else if(uc=='paper' && cc=='scissors')
+                {result=('you lose')}
+                else if(uc=='rock' && cc=='scissors')
+                {result=('you win')}
+                else if(uc=='rock' && cc=='paper')
+                {result=('you win')}
+                alert(`you chose ${uc} and computer chose ${cc} and the result is ${result}`);
+                
+            }
+           
+        </script>
+        
+        
+    </body>
+</html>
